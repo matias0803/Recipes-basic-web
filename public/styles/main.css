@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #EDF2F7, #8FA2CA); /* Degradado lineal */
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8FA2CA; 
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Añadido un margen inferior al header */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: #EDF2F7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0; /* Eliminado padding-bottom y agregado margen */
+}
+
+.header-left img {
+    max-width: 80px;
+    border-radius: 50px;
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Agrega una transición suave al transform */
+}
+
+.header-left img:hover {
+    transform: translateY(-5px); /* Eleva el logo al pasar el cursor */
+}
+
+.header-center {
+    color: #EDF2F7;
+    flex: 1;
+    text-align: center;
+    padding-right: 100px;
+}
+
+.recipe-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.data-comida {
+    color: #8FA2CA;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.section-title {
+    color: #8FA2CA;
+    margin-bottom: 10px;
+}
+
+.ingredients-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.instructions p {
+    line-height: 1.6;
+}
+
+/* Add more CSS for hover effects, transitions, etc. as needed */

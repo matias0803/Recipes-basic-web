@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Random Recipes</title>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="/images/logo.jpg" onclick="reloadPage()">
+        </div>
+        <div class="header-center">
+            <h1>Random Recipes</h1>
+        </div>
+
+    </header>
+
+    <div class="recipe-container">
+        <div class="recipe-details">
+            <div class="data-comida">
+                <h2><%= recipe.strMeal %></h2>
+                <p><strong>Categoría:</strong> <%= recipe.strCategory %></p>
+                <p><strong>Área:</strong> <%= recipe.strArea %></p>
+            </div>
+            <div class="image">
+                <img src="<%= recipe.strMealThumb %>" alt="<%= recipe.strMeal %>" width="300">
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Ingredients:</h2>
+            <ul class="ingredients-list">
+                <% for(let i = 1; i <= 20; i++) { %>
+                    <% if (recipe['strIngredient' + i]) { %>
+                        <li><%= recipe['strIngredient' + i] %> - <%= recipe['strMeasure' + i] %></li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Instructions:</h2>
+            <div class="instructions">
+                <p><%= recipe.strInstructions %></p>
+            </div>
+        </div>
+        <script>
+            function reloadPage() {
+                location.reload();
+            }
+        </script>
+</body>
+</html>
